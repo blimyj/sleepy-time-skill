@@ -15,6 +15,11 @@ class SleepyTime(MycroftSkill):
         self.audiobook_instance = vlc.Instance()  # '--novideo')
         self.audiobook_player = self.audiobook_instance.media_player_new()
 
+        # Setup audio device
+        if self.audiobook_player.audio_output_device_get() == None:
+            device = self.audiobook_player.audio_output_device_enum()
+            self.audiobook_player.audio_output_device_set(device_id=device)
+
         # State of audiobook player before it was paused due to Mycroft listening or speaking
         self.pre_pause_state_audplayer = 0
 
