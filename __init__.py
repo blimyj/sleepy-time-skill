@@ -18,7 +18,7 @@ class SleepyTime(MycroftSkill):
         # Setup audio device
         if self.audiobook_player.audio_output_device_get() is None:
             device = self.audiobook_player.audio_output_device_enum()
-            self.audiobook_player.audio_output_device_set(None, device_id=device)
+            self.audiobook_player.audio_output_device_set(None, device_id=str(device))
 
         # State of audiobook player before it was paused due to Mycroft listening or speaking
         self.pre_pause_state_audplayer = 0
