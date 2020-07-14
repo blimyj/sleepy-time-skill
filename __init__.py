@@ -139,7 +139,7 @@ class SleepyTime(MycroftSkill):
         self.log.debug('Reader Read for 1hr 30min')
 
         # Schedule reader pause
-        read_for = timedelta(hours=0, minutes=1, seconds=0, microseconds=0)
+        read_for = timedelta(hours=0, minutes=45, seconds=0, microseconds=0)
         pause_time = datetime.now() + read_for
         self.schedule_event(self.strict_pause_reader, pause_time)
 
