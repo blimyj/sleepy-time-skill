@@ -17,3 +17,9 @@ blimyj
 
 ## Tags
 
+## FAQ
+
+* "libvlc_new not found"
+  * Restart mycroft-core as current instance may be using the previous version of vlc.
+  * bash stop-mycroft.sh all
+  * bash start-mycroft debug
