@@ -31,3 +31,6 @@ dependencies:
 #   # Pip dependencies on PyPI
   python:
     - python-vlc>=3.0.0
+  system:
+    #     # For simple packages, this is all that is necessary
+    all: vlc
